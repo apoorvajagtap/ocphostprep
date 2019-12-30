@@ -1,0 +1,69 @@
+"3.9":
+    - REFRESHING:subscription-manager refresh
+    - FINDING:p_id=`subscription-manager list --available --matches 'Employee SKU' | grep -i 'pool id' | awk 'NR==1{print $3}'`
+    - ATTACHING:subscription-manager attach --pool=`subscription-manager list --available --matches 'Employee SKU' | grep -i 'pool id' | awk 'NR==1{print $3}'`
+    - DISABLING:subscription-manager repos --disable='*'
+    - ENABLING:subscription-manager repos --enable="rhel-7-server-rpms" --enable="rhel-7-server-extras-rpms" --enable="rhel-7-server-ose-3.9-rpms" --enable="rhel-7-fast-datapath-rpms" --enable="rhel-7-server-ansible-2.4-rpms"
+    - INSTALLING-wget:yum install wget -y
+    - INSTALLING-git:yum install git -y
+    - INSTALLING-net-tools:yum install net-tools -y
+    - INSTALLING-bind-utils:yum install bind-utils -y
+    - INSTALLING-atomic-openshift-utils:yum install atomic-openshift-utils -y
+    - INSTALLING-iptables-services:yum install iptables-services -y
+    - INSTALLING-bridge-utils:yum install bridge-utils -y
+    - INSTALLING-bash-completion:yum install bash-completion -y
+    - INSTALLING-kexec-tools:yum install kexec-tools -y
+    - INSTALLING-sos:yum install sos -y
+    - INSTALLING-psacct:yum install psacct -y
+    - INSTALLING-vim:yum install vim -y
+    - INSTALLING-docker:yum install docker -y
+    - INSTALLING-openshift-ansible:yum install openshift-ansible -y
+    - INSTALLING-dnsmasq:yum install dnsmasq -y
+    - UPDATING:yum update -y
+
+"3.10":
+    - REFRESHING:subscription-manager refresh
+    - FINDING:p_id=`subscription-manager list --available --matches 'Employee SKU' | grep -i 'pool id' | awk 'NR==1{print $3}'`
+    - ATTACHING:subscription-manager attach --pool=`subscription-manager list --available --matches 'Employee SKU' | grep -i 'pool id' | awk 'NR==1{print $3}'`
+    - DISABLING:subscription-manager repos --disable='*'
+    - ENABLING:subscription-manager repos --enable="rhel-7-server-rpms" --enable="rhel-7-server-extras-rpms" --enable="rhel-7-server-ose-3.10-rpms" --enable="rhel-7-server-ansible-2.4-rpms"
+    - INSTALLING-wget:yum install wget -y
+    - INSTALLING-git:yum install git -y
+    - INSTALLING-net-tools:yum install net-tools -y
+    - INSTALLING-bind-utils:yum install bind-utils -y
+    - INSTALLING-yum-utils:yum install yum-utils -y
+    - INSTALLING-iptables-services:yum install iptables-services -y
+    - INSTALLING-bridge-utils:yum install bridge-utils -y
+    - INSTALLING-bash-completion:yum install bash-completion -y
+    - INSTALLING-kexec-tools:yum install kexec-tools -y
+    - INSTALLING-sos:yum install sos -y
+    - INSTALLING-psacct:yum install psacct -y
+    - INSTALLING-vim:yum install vim -y
+    - INSTALLING-docker:yum install docker -y
+    - INSTALLING-openshift-ansible:yum install openshift-ansible -y
+    - INSTALLING-dnsmasq:yum install dnsmasq -y
+    - UPDATING:yum update -y
+
+
+"3.11":
+    - REFRESHING:subscription-manager refresh
+    - FINDING:p_id=`subscription-manager list --available --matches 'Employee SKU' | grep -i 'pool id' | awk 'NR==1{print $3}'`
+    - ATTACHING:subscription-manager attach --pool=`subscription-manager list --available --matches 'Employee SKU' | grep -i 'pool id' | awk 'NR==1{print $3}'`
+    - DISABLING:subscription-manager repos --disable='*'
+    - ENABLING:subscription-manager repos --enable="rhel-7-server-rpms" --enable="rhel-7-server-extras-rpms" --enable="rhel-7-server-ose-3.11-rpms" --enable="rhel-7-server-ansible-2.6-rpms"
+    - INSTALLING-wget:yum install wget -y
+    - INSTALLING-git:yum install git -y
+    - INSTALLING-net-tools:yum install net-tools -y
+    - INSTALLING-bind-utils:yum install bind-utils -y
+    - INSTALLING-yum-utils:yum install yum-utils -y
+    - INSTALLING-iptables-services:yum install iptables-services -y
+    - INSTALLING-bridge-utils:yum install bridge-utils -y
+    - INSTALLING-bash-completion:yum install bash-completion -y
+    - INSTALLING-kexec-tools:yum install kexec-tools -y
+    - INSTALLING-sos:yum install sos -y
+    - INSTALLING-psacct:yum install psacct -y
+    - INSTALLING-vim:yum install vim -y
+    - INSTALLING-docker:yum install docker -y
+    - INSTALLING-openshift-ansible:yum install openshift-ansible -y
+    - INSTALLING-dnsmasq:yum install dnsmasq -y
+    - UPDATING:yum update -y
