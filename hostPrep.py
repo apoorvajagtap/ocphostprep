@@ -52,7 +52,7 @@ def executeCommand(ip, failedIpList):
         "subscription-manager register --username={} --password={} --force".format(rhnId, rhnPassword))
     errStatus(ip, stdout, stderr, failedIpList, "REGISTRATION")
 
-    with open("yaml_file.yaml", 'r') as yaml_file:
+    with open("ocpversion.yaml", 'r') as yaml_file:
         yaml_reader = yaml.load(yaml_file, Loader=yaml.FullLoader)
         for items, value in yaml_reader.items():
             if ocpVersion == items:
